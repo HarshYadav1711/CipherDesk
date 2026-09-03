@@ -1,11 +1,11 @@
 /**
  * Site identity constants.
- * CipherDesk is the approved demo product name.
+ * CipherDesk is the approved demo product name — not the hiring startup’s company name.
  */
 export const SITE_NAME = "CipherDesk";
 
 export const SITE_TAGLINE =
-  "Practical cybersecurity research and engineering notes.";
+  "Cybersecurity research, engineering notes and practical security deep dives.";
 
 export const SITE_DESCRIPTION =
-  "CipherDesk is a cybersecurity editorial and research desk covering browser security, identity, APIs, and secure architecture.";
+  "Cybersecurity research, engineering notes and practical security deep dives.";
