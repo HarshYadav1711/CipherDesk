@@ -10,6 +10,7 @@ type SectionHeadingProps = {
   className?: string;
   tone?: "on-dark" | "on-light";
   as?: "h1" | "h2" | "h3";
+  headingId?: string;
 };
 
 /**
@@ -22,6 +23,7 @@ export function SectionHeading({
   className,
   tone = "on-dark",
   as: Tag = "h2",
+  headingId,
 }: SectionHeadingProps) {
   const titleClass =
     Tag === "h1"
@@ -38,6 +40,7 @@ export function SectionHeading({
         </Eyebrow>
       ) : null}
       <Tag
+        id={headingId}
         className={cn(
           titleClass,
           "m-0",

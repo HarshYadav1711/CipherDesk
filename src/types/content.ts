@@ -15,3 +15,17 @@ export interface Article {
   readingTimeMinutes: number;
   featured?: boolean;
 }
+
+export interface Topic {
+  slug: string;
+  name: ArticleCategory;
+  description: string;
+}
+
+export interface LearningTrack {
+  slug: string;
+  order: number;
+  title: string;
+  description: string;
+  level: "Foundation" | "Intermediate" | "Advanced";
+}

@@ -1,10 +1,11 @@
 import { Hero } from "@/components/home/hero";
+import { LatestResearch } from "@/components/home/latest-research";
 import { SiteHeader } from "@/components/layout/site-header";
 import { Container } from "@/components/ui/container";
 
 /**
- * Phase 2: header + hero + featured story.
- * Later homepage sections remain landmarks only.
+ * Phase 3 (part 1): header, hero, featured story, Latest Research.
+ * Topics / Learning UI deferred.
  */
 export default function Home() {
   return (
@@ -12,26 +13,20 @@ export default function Home() {
       <SiteHeader />
       <main>
         <Hero />
+        <LatestResearch />
 
-        <SectionLandmark
-          id="research"
-          eyebrow="01 · Research"
-          title="Research"
-          note="Latest research section placeholder — content in Phase 3."
-          surface="paper"
-        />
         <SectionLandmark
           id="topics"
           eyebrow="02 · Topics"
           title="Topics"
-          note="Topic index placeholder — content in Phase 3."
+          note="Topic index placeholder — content model ready; UI in the next Phase 3 step."
           surface="paper"
         />
         <SectionLandmark
           id="learning"
           eyebrow="03 · Learning"
           title="Learning"
-          note="Learning tracks placeholder — content in Phase 3."
+          note="Learning tracks placeholder — content model ready; UI in the next Phase 3 step."
           surface="ink"
         />
         <SectionLandmark
