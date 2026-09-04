@@ -1,12 +1,13 @@
 import { Hero } from "@/components/home/hero";
 import { LatestResearch } from "@/components/home/latest-research";
+import { LearningTracks } from "@/components/home/learning-tracks";
 import { TopicIndex } from "@/components/home/topic-index";
 import { SiteHeader } from "@/components/layout/site-header";
 import { Container } from "@/components/ui/container";
 
 /**
- * Phase 3: header, hero, featured story, Latest Research, Topic Index.
- * Learning / CTA / footer UI deferred.
+ * Phase 3: header, hero, featured story, Latest Research, Topic Index,
+ * Learning Tracks. CTA / footer UI deferred.
  */
 export default function Home() {
   return (
@@ -16,14 +17,8 @@ export default function Home() {
         <Hero />
         <LatestResearch />
         <TopicIndex />
+        <LearningTracks />
 
-        <SectionLandmark
-          id="learning"
-          eyebrow="03 · Learning"
-          title="Learning"
-          note="Learning tracks placeholder — content model ready; UI in the next Phase 3 step."
-          surface="ink"
-        />
         <SectionLandmark
           id="about"
           eyebrow="04 · About"

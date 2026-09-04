@@ -3,7 +3,6 @@ import type { LearningTrack } from "@/types/content";
 /**
  * Approved educational progression (PRD / Architecture).
  * Curriculum map only — not a live course platform.
- * UI ships in a later Phase 3 step.
  */
 export const learningTracks: LearningTrack[] = [
   {
