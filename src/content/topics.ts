@@ -2,43 +2,37 @@ import type { Topic } from "@/types/content";
 
 /**
  * Approved topic taxonomy (PRD / Architecture).
- * UI for this index ships in a later Phase 3 step.
+ * Concise descriptions suit the editorial index layout.
  */
 export const topics: Topic[] = [
   {
     slug: "web-security",
     name: "Web Security",
-    description:
-      "Browser boundaries, CSP, CORS and the trust model of the modern web platform.",
+    description: "Browser boundaries, CSP and CORS",
   },
   {
     slug: "appsec",
     name: "AppSec",
-    description:
-      "Secure application architecture, input handling and practical vulnerability patterns.",
+    description: "Secure application architecture",
   },
   {
     slug: "identity",
     name: "Identity",
-    description:
-      "Sessions, OAuth, tokens and authorization boundaries between users and services.",
+    description: "Sessions, OAuth and authorization",
   },
   {
     slug: "cloud",
     name: "Cloud",
-    description:
-      "Cloud attack surfaces, identity-aware controls and shared-responsibility pitfalls.",
+    description: "Cloud attack surfaces and controls",
   },
   {
     slug: "secure-coding",
     name: "Secure Coding",
-    description:
-      "Defensive coding patterns that reduce XSS, injection and unsafe defaults at the source.",
+    description: "Implementation-level security",
   },
   {
     slug: "threat-modelling",
     name: "Threat Modelling",
-    description:
-      "Structured ways to reason about assets, adversaries and trust before writing more code.",
+    description: "Assets, boundaries and system risk",
   },
 ];
