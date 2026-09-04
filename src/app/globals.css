@@ -132,8 +132,11 @@ p {
   text-wrap: pretty;
 }
 
-a {
-  color: inherit;
+/* Keep link reset in @layer base so utility colors (e.g. text-accent-ink) can win. */
+@layer base {
+  a {
+    color: inherit;
+  }
 }
 
 /* ============================================================
