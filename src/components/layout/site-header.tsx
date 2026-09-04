@@ -27,7 +27,7 @@ export function SiteHeader() {
           <ul className="m-0 flex list-none items-center gap-8 p-0">
             {NAV_LINKS.map((item) => (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
                   className={cn(
                     "relative text-sm text-muted-on-dark transition-colors duration-[var(--duration-fast)] ease-[var(--ease-standard)]",
@@ -37,14 +37,14 @@ export function SiteHeader() {
                   )}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
 
         <div className="hidden shrink-0 lg:block">
-          <a
+          <Link
             href={NAV_CTA.href}
             className="group inline-flex items-center gap-2 text-sm font-medium text-text-on-dark transition-colors duration-[var(--duration-fast)] ease-[var(--ease-standard)] hover:text-accent"
           >
@@ -57,7 +57,7 @@ export function SiteHeader() {
             >
               →
             </span>
-          </a>
+          </Link>
         </div>
 
         <MobileNav />

@@ -1,5 +1,7 @@
+import Link from "next/link";
+
 import type { Article } from "@/types/content";
-import { cn, formatArticleDate } from "@/lib/utils";
+import { cn, formatArticleDate, getArticleHref } from "@/lib/utils";
 
 type ArticleItemProps = {
   article: Article;
@@ -9,13 +11,12 @@ type ArticleItemProps = {
 
 /**
  * Compact supporting item for the Latest Research side list.
- * Presentational only — no href until routes exist.
  */
 export function ArticleItem({ article, className, index }: ArticleItemProps) {
   return (
     <article
       className={cn(
-        "border-b border-border-light py-5 last:border-b-0 last:pb-0 first:pt-0",
+        "group border-b border-border-light py-5 last:border-b-0 last:pb-0 first:pt-0",
         className,
       )}
     >
@@ -31,7 +32,14 @@ export function ArticleItem({ article, className, index }: ArticleItemProps) {
         ) : null}
       </div>
 
-      <h3 className="text-title mt-2 m-0 text-text-on-light">{article.title}</h3>
+      <h3 className="text-title mt-2 m-0 text-text-on-light">
+        <Link
+          href={getArticleHref(article.slug)}
+          className="bg-[linear-gradient(currentColor,currentColor)] bg-size-[0_1px] bg-bottom bg-no-repeat transition-[background-size] duration-[var(--duration-fast)] ease-[var(--ease-standard)] group-hover:bg-size-[100%_1px]"
+        >
+          {article.title}
+        </Link>
+      </h3>
 
       <p className="text-meta mt-3 m-0 text-muted-on-light">
         <time dateTime={article.publishedAt}>

@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 
 import { NAV_CTA, NAV_LINKS } from "@/lib/constants";
@@ -93,19 +94,19 @@ export function MobileNav() {
           <ul className="m-0 flex list-none flex-col gap-1 p-0">
             {NAV_LINKS.map((item) => (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
                   className="block rounded-control px-3 py-3 text-sm text-text-on-dark transition-colors duration-[var(--duration-fast)] ease-[var(--ease-standard)] hover:bg-ink-soft hover:text-accent"
                   onClick={close}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
 
           <div className="mt-3 border-t border-border-dark pt-3">
-            <a
+            <Link
               href={NAV_CTA.href}
               className="group inline-flex items-center gap-2 px-3 py-3 text-sm font-medium text-accent transition-colors duration-[var(--duration-fast)] ease-[var(--ease-standard)] hover:text-accent-hover"
               onClick={close}
@@ -117,7 +118,7 @@ export function MobileNav() {
               >
                 →
               </span>
-            </a>
+            </Link>
           </div>
         </nav>
       </div>

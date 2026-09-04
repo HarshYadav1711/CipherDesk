@@ -6,6 +6,11 @@ export type ArticleCategory =
   | "Secure Coding"
   | "Threat Modelling";
 
+/** Structured article body — typed blocks, no Markdown pipeline. */
+export type ArticleBlock =
+  | { type: "heading"; text: string }
+  | { type: "paragraph"; text: string };
+
 export interface Article {
   slug: string;
   title: string;
@@ -14,6 +19,7 @@ export interface Article {
   publishedAt: string;
   readingTimeMinutes: number;
   featured?: boolean;
+  body: ArticleBlock[];
 }
 
 export interface Topic {

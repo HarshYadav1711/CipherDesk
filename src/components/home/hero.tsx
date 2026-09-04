@@ -37,7 +37,7 @@ export function Hero() {
             </p>
 
             <div className="mt-7 sm:mt-8">
-              <EditorialLink href="#research">Explore research</EditorialLink>
+              <EditorialLink href="/#research">Explore research</EditorialLink>
             </div>
           </div>
 

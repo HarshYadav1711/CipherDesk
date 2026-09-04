@@ -1,5 +1,7 @@
+import Link from "next/link";
+
 import type { Article } from "@/types/content";
-import { cn, formatArticleDate } from "@/lib/utils";
+import { cn, formatArticleDate, getArticleHref } from "@/lib/utils";
 
 type ArticleLeadProps = {
   article: Article;
@@ -8,13 +10,12 @@ type ArticleLeadProps = {
 
 /**
  * Dominant editorial piece for Latest Research.
- * Non-linked until article routes exist — avoids fake navigation.
  */
 export function ArticleLead({ article, className }: ArticleLeadProps) {
   return (
     <article
       className={cn(
-        "flex h-full flex-col border-b border-border-light pb-8 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-10",
+        "group flex h-full flex-col border-b border-border-light pb-8 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-10",
         className,
       )}
     >
@@ -27,7 +28,12 @@ export function ArticleLead({ article, className }: ArticleLeadProps) {
       </p>
 
       <h3 className="text-heading-3 mt-4 m-0 max-w-[18ch] text-text-on-light">
-        {article.title}
+        <Link
+          href={getArticleHref(article.slug)}
+          className="bg-[linear-gradient(currentColor,currentColor)] bg-size-[0_1px] bg-bottom bg-no-repeat transition-[background-size,color] duration-[var(--duration-fast)] ease-[var(--ease-standard)] group-hover:bg-size-[100%_1px] hover:text-text-on-light"
+        >
+          {article.title}
+        </Link>
       </h3>
 
       <p className="text-body-lg mt-4 m-0 max-w-[40ch] text-muted-on-light">

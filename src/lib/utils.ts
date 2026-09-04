@@ -17,3 +17,8 @@ export function formatArticleDate(isoDate: string): string {
     timeZone: "UTC",
   }).format(date);
 }
+
+/** Canonical article path from typed slug. */
+export function getArticleHref(slug: string): `/articles/${string}` {
+  return `/articles/${slug}`;
+}

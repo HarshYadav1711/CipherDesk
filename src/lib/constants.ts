@@ -10,15 +10,15 @@ export const SITE_TAGLINE =
 export const SITE_DESCRIPTION =
   "Cybersecurity research, engineering notes and practical security deep dives.";
 
-/** In-page anchors — no dead routes until article pages exist. */
+/** Section anchors — rooted so they resolve from article routes too. */
 export const NAV_LINKS = [
-  { href: "#research", label: "Research" },
-  { href: "#topics", label: "Topics" },
-  { href: "#learning", label: "Learning" },
-  { href: "#about", label: "About" },
+  { href: "/#research", label: "Research" },
+  { href: "/#topics", label: "Topics" },
+  { href: "/#learning", label: "Learning" },
+  { href: "/#about", label: "About" },
 ] as const;
 
 export const NAV_CTA = {
-  href: "#research",
+  href: "/#research",
   label: "Browse research",
 } as const;

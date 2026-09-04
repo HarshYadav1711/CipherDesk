@@ -1,5 +1,7 @@
+import Link from "next/link";
+
 import type { Article } from "@/types/content";
-import { cn } from "@/lib/utils";
+import { cn, getArticleHref } from "@/lib/utils";
 
 type FeaturedStoryProps = {
   article: Article;
@@ -7,7 +9,7 @@ type FeaturedStoryProps = {
 };
 
 /**
- * Cover-story panel for the hero. Links to #research until article routes exist.
+ * Cover-story panel for the hero. Links to the article route.
  */
 export function FeaturedStory({ article, className }: FeaturedStoryProps) {
   return (
@@ -17,8 +19,8 @@ export function FeaturedStory({ article, className }: FeaturedStoryProps) {
         className,
       )}
     >
-      <a
-        href="#research"
+      <Link
+        href={getArticleHref(article.slug)}
         className="relative flex h-full min-h-[20rem] flex-col justify-between p-6 focus-visible:outline-offset-[-4px] sm:min-h-[22rem] sm:p-7 lg:min-h-0 lg:p-8"
       >
         <div className="flex items-start justify-between gap-4">
@@ -88,7 +90,7 @@ export function FeaturedStory({ article, className }: FeaturedStoryProps) {
             opacity="0.55"
           />
         </svg>
-      </a>
+      </Link>
     </article>
   );
 }

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Container } from "@/components/ui/container";
 import { NAV_LINKS, SITE_NAME, SITE_TAGLINE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -26,7 +28,7 @@ export function SiteFooter() {
             <ul className="m-0 flex list-none flex-wrap gap-x-6 gap-y-3 p-0">
               {NAV_LINKS.map((item) => (
                 <li key={item.href}>
-                  <a
+                  <Link
                     href={item.href}
                     className={cn(
                       "text-sm text-muted-on-dark transition-colors duration-[var(--duration-fast)] ease-[var(--ease-standard)]",
@@ -34,7 +36,7 @@ export function SiteFooter() {
                     )}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

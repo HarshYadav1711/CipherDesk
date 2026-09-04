@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Container } from "@/components/ui/container";
 
 /**
@@ -25,13 +27,13 @@ export function NewsletterCta() {
           </p>
 
           <div className="mt-8">
-            <a
-              href="#research"
+            <Link
+              href="/#research"
               className="inline-flex items-center gap-2 rounded-control bg-accent px-4 py-2.5 text-sm font-medium text-accent-ink transition-[background-color] duration-[var(--duration-fast)] ease-[var(--ease-standard)] hover:bg-accent-hover"
             >
               Browse latest research
               <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </Container>

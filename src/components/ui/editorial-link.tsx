@@ -1,8 +1,9 @@
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import Link from "next/link";
+import type { ComponentProps, ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-type EditorialLinkProps = ComponentPropsWithoutRef<"a"> & {
+type EditorialLinkProps = ComponentProps<typeof Link> & {
   children: ReactNode;
   withArrow?: boolean;
 };
@@ -17,7 +18,7 @@ export function EditorialLink({
   ...props
 }: EditorialLinkProps) {
   return (
-    <a
+    <Link
       className={cn(
         "group text-body inline-flex items-center gap-2 font-medium text-text-on-dark transition-[color] duration-[var(--duration-fast)] ease-[var(--ease-standard)] hover:text-accent focus-visible:text-accent",
         className,
@@ -33,6 +34,6 @@ export function EditorialLink({
           →
         </span>
       ) : null}
-    </a>
+    </Link>
   );
 }
